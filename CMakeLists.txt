@@ -17,7 +17,9 @@ file(GLOB_RECURSE CPP_LIST src/*.cpp)
 add_executable(trojan ${CPP_LIST})
 target_include_directories(trojan PRIVATE src)
 
-set(CMAKE_FIND_ROOT_PATH /home/apexchu/Desktop/buildroot/output/host/mips64-buildroot-linux-uclibc/sysroot/usr/lib/)
+set(CMAKE_FIND_ROOT_PATH /home/apexchu/Desktop/buildroot/output/host/mips64-buildroot-linux-uclibc/sysroot/usr/lib)
+set(TARGET_ARCH mips64)
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM ONLY)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)

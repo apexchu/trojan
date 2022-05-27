@@ -17,6 +17,8 @@ file(GLOB_RECURSE CPP_LIST src/*.cpp)
 add_executable(trojan ${CPP_LIST})
 target_include_directories(trojan PRIVATE src)
 
+set(CMAKE_FIND_ROOT_PATH /home/apexchu/Desktop/buildroot/output/host/mips64-buildroot-linux-uclibc/sysroot/usr/lib/)
+
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 target_link_libraries(trojan ${CMAKE_THREAD_LIBS_INIT})

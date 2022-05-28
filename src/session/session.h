@@ -20,7 +20,7 @@
 #ifndef _SESSION_H_
 #define _SESSION_H_
 
-#include <time.h>
+#include <ctime>
 #include <memory>
 #include <boost/asio/io_context.hpp>
 #include <boost/asio/ip/udp.hpp>

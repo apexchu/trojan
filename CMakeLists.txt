@@ -17,13 +17,6 @@ file(GLOB_RECURSE CPP_LIST src/*.cpp)
 add_executable(trojan ${CPP_LIST})
 target_include_directories(trojan PRIVATE src)
 
-set(CMAKE_FIND_ROOT_PATH /home/apexchu/Desktop/buildroot/output/host/mips64-buildroot-linux-uclibc/sysroot)
-set(TARGET_ARCH mips64)
-set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM ONLY)
-
-SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "/home/apexchu/Desktop/boost_1_66_0/boost")
-SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "/home/apexchu/Desktop/buildroot/output/host/mips64-buildroot-linux-uclibc/sysroot/usr/lib")
-
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 target_link_libraries(trojan ${CMAKE_THREAD_LIBS_INIT})
